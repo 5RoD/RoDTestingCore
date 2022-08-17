@@ -1,0 +1,14 @@
+name: RoDTesting
+version: '${project.version}'
+main: me.rod.rodtesting.RoDTesting
+api-version: 1.19
+authors: [ 5RoD ]
+description: GraveCORE for everything
+website: https://gravemc.net
+commands:
+  sex:
+    description: sex heals you
+    usage: /<command>
+  feed:
+    description: feeds you
+    usage:

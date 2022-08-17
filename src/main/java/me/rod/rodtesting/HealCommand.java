@@ -12,22 +12,22 @@ public class HealCommand implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
 
-        if (command.getName().equalsIgnoreCase("sex")){
+        if (command.getName().equalsIgnoreCase("sex")) {
 
             if (sender instanceof Player) {
 
                 Player p = (Player) sender;
-                if (p.hasPermission("rodtestingcore.vip"))
+                if (p.hasPermission("rodtestingcore.vip")) {
                     p.setHealth(20);
-                p.sendMessage(ChatColor.GREEN + "You have Fully Healed! :D");
+                    p.sendMessage(ChatColor.GREEN + "You have Fully Healed! :D");
 
-            }else{
-                Player p = (Player) sender;
-                p.sendMessage(ChatColor.RED + "You do not have permission to do that!");
+                } else {
+                    p.sendMessage(ChatColor.RED + "You do not have permissions!");
+                }
             }
+
+
         }
-
-
         return true;
     }
 }

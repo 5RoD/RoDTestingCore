@@ -16,19 +16,23 @@ public class FeedCommand implements CommandExecutor {
         if (sender instanceof Player) {
 
             Player player = (Player) sender;
-            if (player.hasPermission("rodtestingcore.vip"));
+            if (player.hasPermission("rodtestingcore.vip")) {
+
+
                 player.setFoodLevel(30);
-            player.sendMessage(ChatColor.GREEN + "you have successfully feed yourself");
+                player.sendMessage(ChatColor.GREEN + "you have successfully feed yourself");
+
+            } else {
+                player.sendMessage(ChatColor.RED + "You do not have permissions!");
+
+            }
 
 
-        } else { Player player = (Player) sender;
-            player.sendMessage(ChatColor.RED + "You do not have permission to do that!");
+
         }
-
         return false;
-
-        }
-
-
     }
+
+
+}
 

@@ -1,6 +1,8 @@
 package me.rod.rodtesting.commands;
 
+import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
+import org.bukkit.Color;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -16,20 +18,35 @@ public class FeedCommand implements CommandExecutor {
         if (sender instanceof Player) {
 
             Player player = (Player) sender;
+            if(args.length == 0)
             if (player.hasPermission("rodtestingcore.vip")) {
-
-
                 player.setFoodLevel(30);
                 player.sendMessage(ChatColor.GREEN + "you have successfully fed yourself");
 
             } else {
-                player.sendMessage(ChatColor.RED + "You do not have permissions!");
+                 String playerName = args[0];
+
+                Player target = Bukkit.getServer().getPlayerExact(playerName);
+
+                if(target == null)
+                    player.sendMessage(ChatColor.RED + "Player not Online!");
+
+
+                }else {
+                String playerName = args[0];
+                Player target = Bukkit.getServer().getPlayerExact(playerName);
+
+                player.sendMessage(ChatColor.GREEN + "You have fully fed" + target.getDisplayName());
+                target.sendMessage(ChatColor.GREEN + "You have been fully fed by" + player.getDisplayName());
+                target.setFoodLevel(20);}
+
+
+            }else{
+            Player player = (Player) sender;
+            player.sendMessage(ChatColor.RED + "You do not have permissions!");
+
 
             }
-
-
-
-        }
         return false;
     }
 

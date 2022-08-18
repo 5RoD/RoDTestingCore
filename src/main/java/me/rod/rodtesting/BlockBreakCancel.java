@@ -12,17 +12,14 @@ public class BlockBreakCancel implements Listener {
 
     @EventHandler
     public void BlockBreakEvent(BlockBreakEvent event) {
-        Player player = event.getPlayer();
-
         event.setCancelled(true);
 
 
-        }
+    }
 
     @EventHandler
     public void BlockPlaceEvent(BlockPlaceEvent event) {
 
-        Player player = event.getPlayer();
         event.setCancelled(true);
 
     }

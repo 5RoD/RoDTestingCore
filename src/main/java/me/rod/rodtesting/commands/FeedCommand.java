@@ -38,8 +38,8 @@ public class FeedCommand implements CommandExecutor {
 
 
                 else {
-                    player.sendMessage(ChatColor.GREEN + "You have fully fed " +  target.getDisplayName());
-                    target.sendMessage(ChatColor.GREEN + "You have been fully fed by " +  player.getDisplayName());
+                    player.sendMessage(ChatColor.GREEN + "You have fully fed " + target.getDisplayName());
+                    target.sendMessage(ChatColor.GREEN + "You have been fully fed by " + player.getDisplayName());
                     target.setFoodLevel(20);
 
                 }
@@ -48,7 +48,7 @@ public class FeedCommand implements CommandExecutor {
 
 
         }
-        return false;
+        return true;
     }
 
 }

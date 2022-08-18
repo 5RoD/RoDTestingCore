@@ -6,9 +6,11 @@ authors: [ 5RoD ]
 description: GraveCORE for everything
 website: https://gravemc.net
 commands:
-  sex:
+  heal:
     description: sex heals you
-    usage: /<command>
   feed:
     description: feeds you
-    usage:
+  setspawn:
+    description: set spawn point command
+  spawn:
+    description: teleports you to the spawn

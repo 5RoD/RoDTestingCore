@@ -18,38 +18,39 @@ public class FeedCommand implements CommandExecutor {
         if (sender instanceof Player) {
 
             Player player = (Player) sender;
-            if(args.length == 0)
-            if (player.hasPermission("rodtestingcore.vip")) {
-                player.setFoodLevel(30);
-                player.sendMessage(ChatColor.GREEN + "you have successfully fed yourself");
+            if (args.length == 0)
+                if (player.hasPermission("rodtestingcore.vip")) {
+                    player.setFoodLevel(30);
+                    player.sendMessage(ChatColor.GREEN + "you have successfully fed yourself");
 
-            } else {
-                 String playerName = args[0];
+                } else {
+
+                    player.sendMessage(ChatColor.RED + "You do not have permissions to do that!");
+
+                }
+            else {
+                String playerName = args[0];
 
                 Player target = Bukkit.getServer().getPlayerExact(playerName);
 
-                if(target == null)
+                if (target == null)
                     player.sendMessage(ChatColor.RED + "Player not Online!");
+            }
+        }else{
 
-
-                }else {
                 String playerName = args[0];
+                Player player = (Player) sender;
                 Player target = Bukkit.getServer().getPlayerExact(playerName);
 
                 player.sendMessage(ChatColor.GREEN + "You have fully fed" + target.getDisplayName());
                 target.sendMessage(ChatColor.GREEN + "You have been fully fed by" + player.getDisplayName());
-                target.setFoodLevel(20);}
-
-
-            }else{
-            Player player = (Player) sender;
-            player.sendMessage(ChatColor.RED + "You do not have permissions!");
-
+                target.setFoodLevel(20);
 
             }
-        return false;
+            return true;
+        }
+
+
     }
 
-
-}
 

@@ -35,22 +35,21 @@ public class FeedCommand implements CommandExecutor {
 
                 if (target == null)
                     player.sendMessage(ChatColor.RED + "Player not Online!");
-            }
-        }else{
 
-                String playerName = args[0];
-                Player player = (Player) sender;
-                Player target = Bukkit.getServer().getPlayerExact(playerName);
 
-                player.sendMessage(ChatColor.GREEN + "You have fully fed" + target.getDisplayName());
-                target.sendMessage(ChatColor.GREEN + "You have been fully fed by" + player.getDisplayName());
-                target.setFoodLevel(20);
+                else {
+                    player.sendMessage(ChatColor.GREEN + "You have fully fed" + target.getDisplayName());
+                    target.sendMessage(ChatColor.GREEN + "You have been fully fed by" + player.getDisplayName());
+                    target.setFoodLevel(20);
+
+                }
 
             }
-            return true;
+
+
         }
-
-
+        return false;
     }
 
+}
 

@@ -1,4 +1,4 @@
-package me.rod.rodtesting;
+package me.rod.rodtesting.commands;
 
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;

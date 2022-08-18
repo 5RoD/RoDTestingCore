@@ -1,14 +1,8 @@
 package me.rod.rodtesting;
 
-import com.avaje.ebeaninternal.server.cluster.mcast.Message;
-import org.bukkit.ChatColor;
-import org.bukkit.command.Command;
-import org.bukkit.command.CommandSender;
-import org.bukkit.entity.Player;
-import org.bukkit.event.EventHandler;
+import me.rod.rodtesting.commands.FeedCommand;
+import me.rod.rodtesting.commands.HealCommand;
 import org.bukkit.event.Listener;
-import org.bukkit.event.entity.PlayerDeathEvent;
-import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public final class RoDTesting extends JavaPlugin implements Listener {
@@ -22,10 +16,12 @@ public final class RoDTesting extends JavaPlugin implements Listener {
         getServer().getPluginManager().registerEvents(new JoinLeaveListener(), this);
         getCommand("feed").setExecutor(new FeedCommand());
         getCommand("sex").setExecutor(new HealCommand());
+        getConfig().options().copyDefaults();
+        saveDefaultConfig();
+
 
 
     }
-
 
  }
 

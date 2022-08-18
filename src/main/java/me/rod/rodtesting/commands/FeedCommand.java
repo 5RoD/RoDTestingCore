@@ -1,4 +1,4 @@
-package me.rod.rodtesting;
+package me.rod.rodtesting.commands;
 
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
@@ -20,7 +20,7 @@ public class FeedCommand implements CommandExecutor {
 
 
                 player.setFoodLevel(30);
-                player.sendMessage(ChatColor.GREEN + "you have successfully feed yourself");
+                player.sendMessage(ChatColor.GREEN + "you have successfully fed yourself");
 
             } else {
                 player.sendMessage(ChatColor.RED + "You do not have permissions!");

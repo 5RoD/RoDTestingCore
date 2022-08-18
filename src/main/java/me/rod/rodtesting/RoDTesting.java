@@ -15,6 +15,7 @@ public final class RoDTesting extends JavaPlugin implements Listener {
         getServer().getPluginManager().registerEvents(this, this);
         getServer().getPluginManager().registerEvents(new BlockBreakCancel(), this);
         getServer().getPluginManager().registerEvents(new JoinLeaveListener(), this);
+        getServer().getPluginManager().registerEvents(new SpawnListener(this), this);
         getCommand("feed").setExecutor(new FeedCommand());
         getCommand("heal").setExecutor(new HealCommand());
         getCommand("setspawn").setExecutor(new SetSpawnCommand(this));

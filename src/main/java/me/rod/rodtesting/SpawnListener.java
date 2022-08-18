@@ -4,6 +4,7 @@ import org.bukkit.Location;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
+import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.event.player.PlayerRespawnEvent;
 
 public class SpawnListener implements Listener {
@@ -20,5 +21,13 @@ public class SpawnListener implements Listener {
         Location location = (Location) plugin.getConfig().get("spawn");
         event.setRespawnLocation(location);
     }
+    @EventHandler
+    public void onJoin(PlayerJoinEvent event) {
+
+        Location location = (Location) plugin.getConfig().get("spawn");
+        event.getPlayer().teleport(location);
+
+    }
 
 }
+

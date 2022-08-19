@@ -7,10 +7,16 @@ description: GraveCORE for everything
 website: https://gravemc.net
 commands:
   heal:
-    description: sex heals you
+    description: heals you
+    permission: rodtestingcore.admin
   feed:
     description: feeds you
+    permission: rodtestingcore.vip
   setspawn:
     description: set spawn point command
+    permission: rodtestingcore.admin
   spawn:
     description: teleports you to the spawn
+  gmc:
+    description: sets your gamemode to creative
+    permission: rodtestingcore.admin

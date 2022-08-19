@@ -1,4 +1,4 @@
-package me.rod.rodtesting;
+package me.rod.rodtesting.listeners;
 
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;

@@ -1,5 +1,6 @@
-package me.rod.rodtesting;
+package me.rod.rodtesting.listeners;
 
+import me.rod.rodtesting.RoDTesting;
 import org.bukkit.Location;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;

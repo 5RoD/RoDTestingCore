@@ -1,4 +1,4 @@
-package me.rod.rodtesting;
+package me.rod.rodtesting.listeners;
 
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;

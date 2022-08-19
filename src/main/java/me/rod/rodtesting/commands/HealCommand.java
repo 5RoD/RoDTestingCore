@@ -17,7 +17,7 @@ public class HealCommand implements CommandExecutor {
             if (sender instanceof Player) {
 
                 Player p = (Player) sender;
-                if (p.hasPermission("rodtestingcore.vip")) {
+                if (p.hasPermission("rodtestingcore.admin")) {
                     p.setHealth(p.getMaxHealth());
                     p.sendMessage(ChatColor.GREEN + "You have Fully Healed! :D");
 

@@ -20,3 +20,5 @@ commands:
   gmc:
     description: sets your gamemode to creative
     permission: rodtestingcore.admin
+  fly:
+    description: enables flight

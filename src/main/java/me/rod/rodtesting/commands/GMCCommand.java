@@ -20,8 +20,6 @@ public class GMCCommand implements CommandExecutor {
                         player.sendMessage(ChatColor.GREEN + "You have changed your gamemode to" + ChatColor.BOLD + " Creative");
                     } else {
                         player.sendMessage(ChatColor.RED + "You do not have permissions to do that!");
-                    }
-                else {
                     String playerName = args[0];
                     Player target = Bukkit.getServer().getPlayerExact(playerName);
                     if (target == null)
